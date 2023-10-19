@@ -1,56 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/094f647d06.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="navbar.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="navbar.css">
-</head>
+  <body>
+    <header>
+      <div class="green-bar">
+        <p>Enjoy Free Shipping On All Orders</p>
+      </div>
 
-<body>
-  <header>
-    <div class="green-bar">
-      <p>Enjoy Free Shipping On All Orders</p>
-    </div>
-
-    <div class="navbar">
-      <div class="logo">
-        <div class="logo-title">
-          <p>modimal</p>
-          <img src="./assets/Subtract.svg">
+      <div class="navbar">
+        <div class="navbar-icons-mobile">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-magnifying-glass"></i>
         </div>
-        <p class="logo-subtitle">women clothing</p>
-      </div>
 
-      <div class="navbar-links">
-        <a href="#">Collection</a>
-        <a href="#">New In</a>
-        <a href="#">Modiweek</a>
-        <a href="#">Plus Size</a>
-        <a href="#">Sustainability</a>
-      </div>
+        <div class="logo">
+          <div class="logo-title">
+            <p>modimal</p>
+            <img src="./assets/Subtract.svg" />
+          </div>
+          <p class="logo-subtitle">women clothing</p>
+        </div>
 
-      <div class="navbar-icons">
-        <img src="./assets/search.svg">
-        <img src="./assets/search.svg">
-        <img src="./assets/search.svg">
-        <img src="./assets/search.svg">
-      </div>
-    </div>
-  </header>
-  <main>
-    <div class="hero">
-      <div class="hero-imagem"></div>
-      <!-- <img src="./assets/hero.png"> -->
-      <div class="hero-button">
-        <p>Elegance in simplicity,</p>
-        <p>Earth’s harmony</p>
-        <input type="button" value="New In">
-      </div>
-    </div>
-  </main>
-</body>
+        <div class="navbar-links">
+          <a href="#">Collection</a>
+          <a href="#">New In</a>
+          <a href="#">Modiweek</a>
+          <a href="#">Plus Size</a>
+          <a href="#">Sustainability</a>
+        </div>
 
+        <div class="navbar-icons">
+          <div class="navbar-icons-desktop">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-user"></i>
+          </div>
+          <div class="navbar-icons-default">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-bag-shopping"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="hero">
+        <img class="hero-image" src="./assets/hero.png" />
+        <div class="hero-button-wrapper">
+          <p>Elegance in simplicity,</p>
+          <p>Earth’s harmony</p>
+          <input class="hero-button" type="button" value="New In" />
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

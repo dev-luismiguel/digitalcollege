@@ -17,40 +17,63 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url('assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'League_Spartan';
+  src: url('assets/fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: normal;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .hero {
+  width: 100%;
+  height: 600px;
   position: relative;
+  overflow: hidden;
 }
 
-.hero-button {
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 30% 60%;
+}
+
+.hero-button-wrapper {
   position: absolute;
   bottom: 20%;
   left: 10%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: italic;
+
+  color: var(--Black, #0C0C0C);
+  font-size: 3vw;
+  font-weight: 400;
+  line-height: 180%;
+  text-transform: capitalize;
 }
 
-.hero-imagem {
-  background-image: url(./assets/hero.png);
-  width: 100%;
-  height: 500px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-@media (max-width: 550px) {
-  .hero-button {
+@media (max-width: 768px) {
+  .hero-button-wrapper {
+    font-size: 20px; 
     bottom: var(--spacing-normal);
     left: var(--spacing-normal);
   }
-
-  
 }
 
-.hero img {
-  width: 100%;
+.hero-button {
+  padding: 16px 32px;
+  border: none;
+  background: var(--White, #FFF);
+  font-family: Montserrat;
 }
-
-
