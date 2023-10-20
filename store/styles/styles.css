@@ -36,8 +36,8 @@ body {
 }
 
 .hero {
-  width: 100vw;  /* 100% of the viewport width */
-  height: calc(0.4167 * 100vw); /* Aspect ratio of 1440x600 */
+  width: 100vw;
+  height: calc(0.4167 * 100vw);
   position: relative;
   overflow: hidden;
 }

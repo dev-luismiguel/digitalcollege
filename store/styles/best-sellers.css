@@ -38,7 +38,7 @@ h6 {
 .products {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: var(--spacing-medium);
 }
 
 .product {
@@ -49,9 +49,9 @@ h6 {
 }
 
 .product img {
-  max-width: 100%;
+  width: 100%;
   display: block;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .favorite {
