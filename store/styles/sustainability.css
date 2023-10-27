@@ -1,0 +1,39 @@
+.sustainability {
+  position: relative;
+}
+
+.sustainability-image {
+  width: 100%;
+  min-height: 408px;
+  object-fit: cover;
+}
+
+.sustainability p {
+  color: var(--primary-primary-800, #272F25);
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+}
+
+.sustainability-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .sustainability-wrapper {
+    bottom: var(--spacing-normal);
+    left: var(--spacing-normal);
+  }
+
+  .sustainability p {
+    font-size: 14px;
+  }
+}
