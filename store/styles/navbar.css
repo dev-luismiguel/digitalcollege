@@ -50,7 +50,6 @@
   display: flex;
   justify-content: space-evenly;
   gap: var(--spacing-normal);
-  overflow: scroll;
 }
 
 .navbar-links a {

@@ -1,0 +1,45 @@
+.modiweek {
+  padding: var(--spacing-huge);
+  background-color: #fff;
+}
+
+.modiweek-item-img {
+  min-width: 200px;
+  width: 100%;
+  display: block;
+  margin: 0;
+  aspect-ratio: 0.676;
+}
+
+.modiweek-items {
+  display: flex;
+  gap: var(--spacing-medium);
+  overflow: scroll;
+}
+
+.modiweek-item {
+  flex: 1;
+  position: relative;
+}
+
+.modiweek-item h6 {
+  padding: var(--spacing-tiny);
+}
+
+.modiweek-item-footer {
+  margin-top: var(--spacing-medium);
+}
+
+@media (max-width: 768px) {
+  .modiweek {
+    padding: var(--spacing-normal);
+  }
+
+  .modiweek-item-footer {
+    margin-top: var(--spacing-smaller);
+  }
+
+  .modiweek-item h6 {
+    padding: 0;
+  }
+}
