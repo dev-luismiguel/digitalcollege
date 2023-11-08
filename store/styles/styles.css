@@ -50,6 +50,16 @@ h3 {
   text-transform: capitalize;
 }
 
+h5 {
+  color: var(--White, #FFF);
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  text-transform: capitalize;
+}
+
 h6 {
   color: var(--Black, #0C0C0C);
   font-family: Montserrat;
@@ -63,11 +73,20 @@ h6 {
   padding: var(--spacing-huge);
 }
 
+.mobile-only {
+  display: none !important;
+}
+
 @media (max-width: 768px) {
   h3 {
     font-size: 20px;
     font-weight: 600;
     margin: var(--spacing-smaller) 0;
+  }
+
+  h5 {
+    font-size: 14px;
+    font-weight: 600;
   }
 
   h6 {
@@ -77,5 +96,13 @@ h6 {
 
   .padding-section {
     padding: var(--spacing-normal);
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: flex !important;
   }
 }
