@@ -1,6 +1,4 @@
 .collection {
-  padding: var(--spacing-huge);
-  background-color: #fff;
   text-align: center;
 }
 
@@ -43,10 +41,6 @@
 }
 
 @media (max-width: 768px) {
-  .collection {
-    padding: var(--spacing-normal);
-  }
-
  .collection-item {
   flex-direction: column;
  }

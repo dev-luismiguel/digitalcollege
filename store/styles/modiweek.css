@@ -1,8 +1,3 @@
-.modiweek {
-  padding: var(--spacing-huge);
-  background-color: #fff;
-}
-
 .modiweek-item-img {
   min-width: 200px;
   width: 100%;
@@ -31,10 +26,6 @@
 }
 
 @media (max-width: 768px) {
-  .modiweek {
-    padding: var(--spacing-normal);
-  }
-
   .modiweek-item-footer {
     margin-top: var(--spacing-smaller);
   }
