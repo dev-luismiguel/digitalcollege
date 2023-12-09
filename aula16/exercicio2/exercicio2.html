@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="exercicio2.css">
+</head>
+<body>
+    <h2>Minha lista de Itens</h2>
+
+    <button onclick="loadItems()">Carregar</button>
+
+    <div id="item-input-group" class="input-group">
+        <label>Nome do item</label>						
+        <input id="addItemInput" type="text">
+        <div class="error-message">Campo obrigatório</div>
+    </div>
+
+    <button onclick="onAddClick()">Adicionar</button>
+
+    <!-- Lista de itens -->
+    <ul id="myList">
+    </ul>
+
+    <script>
+        function onAddClick() {
+            const campo = document.getElementById("addItemInput");
+            const item = campo.value;
+            
+            const isItemValid = validarItem(item)
+            if (isItemValid) {
+                adicionarItem(item);
+            }
+
+            campo.value = ""
+            campo.focus()
+        }
+
+        function adicionarItem(item) {
+            const li = document.createElement("li");
+            li.textContent = item;
+
+            const deleteBtn = document.createElement("button");
+            deleteBtn.classList.add("delete")
+            deleteBtn.innerText = "Deletar"
+            deleteBtn.onclick = () => {
+                li.remove();
+            };
+
+            li.appendChild(deleteBtn);
+
+            const list = document.getElementById("myList");
+            list.appendChild(li);
+        }
+
+        function validarItem(item) {
+            const campo = document.getElementById("item-input-group")
+
+            if (item === "") {
+                campo.classList.add("error")
+                return false
+            }
+
+            campo.classList.remove("error")
+            return true
+        }
+
+        function loadItems() {
+            const items = ["Item 1", "Item 2", "Item 3"];
+            items.forEach((item) => adicionarItem(item))
+        }
+    </script>
+</body>
+</html>

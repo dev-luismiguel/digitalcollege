@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="exercicio1.css">
+</head>
+<body>
+    <input id="numero1" type="number">
+    +
+    <input id="numero2" type="number">
+
+    <!-- <div id="result">O resultado de X + Y é: Z</div> -->
+    <p id="result"></p>
+
+    <button onclick="onSumClick()">Somar</button>
+    
+    <script>
+        function onSumClick() {
+            const numero1 = Number(window.document.getElementById("numero1").value);
+            const numero2 = Number(window.document.getElementById("numero2").value);
+            
+            const result = somar(numero1, numero2);
+            showResult(numero1, numero2, result)
+        }
+
+        function somar(numero1, numero2) {
+            return numero1 + numero2;
+        }
+
+        function showResult(numero1, numero2, result) {
+            const pResult = window.document.getElementById("result")
+            pResult.innerText = `O resultado de ${numero1} + ${numero2} é: ${result}`
+        }
+    </script>
+</body>
+</html>

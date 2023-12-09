@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+input[type=text] {
+    background: #fff;
+    border: 1px solid #999;
+    font-size: 13px;
+    min-height: 33px;
+    margin: 0;
+    padding: 0 0 0 10px;
+    width: 100%;
+    outline: none;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.delete {
+    background-color: #ff0040;
+}
+
+.delete:hover {
+    background-color: #ae002c;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    margin-top: 8px;
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group {
+    color: #333;
+    font-size: 13px;
+    line-height: 20px;
+    width: 200px;
+}
+
+label {
+    display: block;
+    margin-bottom: 2px;
+}
+
+.error-message {
+    color: #cc0033;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 5px 0 0;
+}
+  
+.input-group .error-message {
+    display: none;
+}
+  
+.error label {
+    color: #cc0033;
+}
+  
+.error input[type=text] {
+    background-color: #fce4e4;
+    border: 1px solid #cc0033;
+    outline: none;
+}
+
+.error .error-message {
+    display: inline-block;
+}
+  
