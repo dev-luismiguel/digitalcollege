@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista Estilizada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        #meuInput, button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #fff;
+            margin-top: 8px;
+            padding: 10px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        li button {
+            padding: 5px 10px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        li button:hover {
+            background-color: #bd2130;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Minha Lista de Itens</h2>
+
+    <!-- Input e Botão -->
+    <input type="text" id="meuInput" placeholder="Adicione um item">
+    <button onclick="adicionarItem()">Adicionar</button>
+
+    <!-- Lista de Itens -->
+    <ul id="minhaLista">
+    </ul>
+
+    <script>
+        function adicionarItem() {
+            var input = document.getElementById("meuInput");
+            var novoItem = input.value;
+            if (novoItem !== '') {
+                var li = document.createElement("li");
+                li.textContent = novoItem;
+
+                // Criar botão de delete
+                var deleteBtn = document.createElement("button");
+                deleteBtn.textContent = "Delete";
+                deleteBtn.onclick = function() {
+                    li.remove();
+                };
+
+                li.appendChild(deleteBtn);
+                document.getElementById("minhaLista").appendChild(li);
+                input.value = '';
+            }
+        }
+    </script>
+
+</body>
+</html>
