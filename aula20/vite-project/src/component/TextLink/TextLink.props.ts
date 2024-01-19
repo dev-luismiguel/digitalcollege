@@ -1,4 +1,4 @@
 export interface TextLinkProps {
-    onClick?: () => void;
-    children: React.ReactNode;
+  onClick?: () => void;
+  children?: React.ReactNode;
 }
