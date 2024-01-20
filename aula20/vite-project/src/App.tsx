@@ -55,16 +55,17 @@ const listaDeDesenvolvedores = [
 ];
 
 function App() {
-  const [filtro, setFiltro] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredList = listaDeDesenvolvedores.filter((item) =>
+    item.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div>
-      <Navbar />
-
-      <input onChange={(e) => setFiltro(e.target.value)} />
-
+      <Navbar onFilterChange={(term) => setSearchTerm(term)} />
       <CardList>
-        {listaDeDesenvolvedores.map((dev) => (
+        {filteredList.map((dev) => (
           <Card
             imageUrl={dev.profileUrl}
             title={dev.name}
