@@ -24,3 +24,13 @@
     display: none;
   }
 }
+
+.inputField {
+  margin: 0 25px;
+  flex: 1;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
