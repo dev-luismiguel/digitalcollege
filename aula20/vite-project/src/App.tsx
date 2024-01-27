@@ -1,69 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Card, CardList, Navbar } from "./component";
-
-const listaDeDesenvolvedores = [
-  {
-    profileUrl: "https://i.pravatar.cc/150?img=1",
-    name: "João Silva",
-    office: "Desenvolvedor Back-end",
-  },
-  {
-    profileUrl: "https://i.pravatar.cc/150?img=2",
-    name: "Maria Santos",
-    office: "Desenvolvedor Front-end",
-  },
-  {
-    profileUrl: "https://i.pravatar.cc/150?img=3",
-    name: "Pedro Alves",
-    office: "Desenvolvedor Full-stack",
-  },
-  {
-    profileUrl: "https://i.pravatar.cc/150?img=4",
-    name: "Ana Rodrigues",
-    office: "Desenvolvedor Mobile",
-  },
-  {
-    profileUrl: "https://i.pravatar.cc/150?img=5",
-    name: "Carlos Pereira",
-    office: "Desenvolvedor Back-end",
-  },
-  {
-    profileUrl: "https://i.pravatar.cc/150?img=6",
-    name: "Mariana Oliveira",
-    office: "Desenvolvedor Front-end",
-  },
-  {
-    profileUrl: "https://i.pravatar.cc/150?img=7",
-    name: "Luís Ferreira",
-    office: "Desenvolvedor Full-stack",
-  },
-  {
-    profileUrl: "https://i.pravatar.cc/150?img=8",
-    name: "Isabel Costa",
-    office: "Desenvolvedor Mobile",
-  },
-  {
-    profileUrl: "https://i.pravatar.cc/150?img=9",
-    name: "José Santos",
-    office: "Desenvolvedor Back-end",
-  },
-  {
-    profileUrl: "https://i.pravatar.cc/150?img=10",
-    name: "Sofia Pereira",
-    office: "Desenvolvedor Front-end",
-  },
-];
+import { DevResult } from "./api/api.props";
+import { getDevs } from "./api/api";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [devList, setDevList] = useState<DevResult[]>([])
 
-  const filteredList = listaDeDesenvolvedores.filter((item) =>
+  const filteredList = devList.filter((item) =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  useEffect(() => {
+    getDevs().then(result => setDevList(result))
+  }, []);
+
   return (
     <div>
-      <Navbar onFilterChange={(term) => setSearchTerm(term)} />
+      <Navbar title="App Legal" onFilterChange={(term) => setSearchTerm(term)} />
       <CardList>
         {filteredList.map((dev) => (
           <Card
