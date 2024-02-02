@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
 import { TextLink } from "../TextLink/TextLink";
 import styles from "./Navbar.module.css";
 import { NavbarProps } from "./Navbar.props";
+import { ROUTES } from "../../pages/routes";
 
 export const Navbar: React.FC<NavbarProps> = ({ onFilterChange, title }) => {
   return (
@@ -12,7 +14,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onFilterChange, title }) => {
       />
       <div className={styles.navLinks}>
         <TextLink>Início</TextLink>
-        <TextLink>Sobre</TextLink>
+        <TextLink>
+          <Link to={ROUTES.About + 'Testeeee'}>Sobre</Link>
+        </TextLink>
         <TextLink>Contato</TextLink>
       </div>
       <div className={styles.logo}>Logo</div>

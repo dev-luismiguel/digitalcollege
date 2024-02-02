@@ -1,7 +1,8 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { ROUTES } from "../routes";
 
 type AboutPageParams = {
-    name: string;
+  name: string;
 };
 
 export const AboutPage = () => {
@@ -12,8 +13,8 @@ export const AboutPage = () => {
     <div style={{ display: "flex", flexDirection: "column" }}>
       <h1>About Page, {name}</h1>
       <a href="/">Return</a>
-      <Link to="/">Return</Link>
-      <div onClick={() => navigate(-1)}>Return</div>
+      <Link to={ROUTES.Home}>Return</Link>
+      <div onClick={() => navigate(ROUTES.Home)}>Return</div>
     </div>
   );
 };
