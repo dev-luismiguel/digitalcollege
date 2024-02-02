@@ -10,12 +10,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onFilterChange, title }) => {
         className={styles.inputField}
         onChange={(e) => onFilterChange(e.target.value)}
       />
-      <div>
-        <div className={styles.logo}>Logo</div>
-        <div className={styles.menu}>
-          <TextLink>Menu</TextLink>
-        </div>
+      <div className={styles.navLinks}>
+        <TextLink>Início</TextLink>
+        <TextLink>Sobre</TextLink>
+        <TextLink>Contato</TextLink>
       </div>
+      <div className={styles.logo}>Logo</div>
     </div>
   );
 };
