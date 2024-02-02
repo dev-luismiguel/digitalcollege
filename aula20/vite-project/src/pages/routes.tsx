@@ -1,6 +1,5 @@
 import { RouteObject } from "react-router-dom";
-import { HomePage } from ".";
-import { AboutPage } from "./AboutPage/AboutPage";
+import { AboutPage, HomePage } from ".";
 
 export const ROUTES = {
   Home: '/',

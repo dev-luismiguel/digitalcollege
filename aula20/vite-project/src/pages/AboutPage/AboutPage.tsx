@@ -1,9 +1,6 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ROUTES } from "../routes";
-
-type AboutPageParams = {
-  name: string;
-};
+import { AboutPageParams } from "./AboutPage.params";
 
 export const AboutPage = () => {
   const navigate = useNavigate();
