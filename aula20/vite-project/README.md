@@ -27,6 +27,14 @@ Com Yarn:
 ```yarn```
 
 Ou, se preferir usar npm:
+```npm i```
+
+### Executar o projeto
+
+Com yarn:
+```yarn dev```
+
+Com npm:
 ```npm run dev```
 
 Isso iniciará o servidor de desenvolvimento do Vite e permitirá que você visualize o projeto no navegador.
