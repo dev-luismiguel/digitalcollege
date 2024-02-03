@@ -13,11 +13,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onFilterChange, title }) => {
         onChange={(e) => onFilterChange(e.target.value)}
       />
       <div className={styles.navLinks}>
-        <TextLink>Início</TextLink>
-        <TextLink>
-          <Link to={ROUTES.About + 'Testeeee'}>Sobre</Link>
-        </TextLink>
-        <TextLink>Contato</TextLink>
+        <TextLink to={ROUTES.Home}>Início</TextLink>
+        <TextLink to={ROUTES.About + 'Testeeee'}>Sobre</TextLink>
       </div>
       <div className={styles.logo}>Logo</div>
     </div>
