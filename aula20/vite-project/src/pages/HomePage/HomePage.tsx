@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { DevResult } from "../../api/api.props";
 import { getDevs } from "../../api/api";
-import { Card, CardList, Navbar } from "../../component";
+import { Card, CardList } from "../../component";
 import { useTheme } from "../../contexts/ThemeContext";
 
 export const HomePage = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [devList, setDevList] = useState<DevResult[]>([])
+  const [devList, setDevList] = useState<DevResult[]>([]);
 
   const { theme, toggleTheme } = useTheme();
 
@@ -15,12 +15,14 @@ export const HomePage = () => {
   );
 
   useEffect(() => {
-    getDevs().then(result => setDevList(result))
+    getDevs().then((result) => setDevList(result));
   }, []);
 
   return (
     <div>
-      <Navbar title="App Legal" onFilterChange={(term) => setSearchTerm(term)} />
+      <input
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
       {theme}
       <button onClick={() => toggleTheme()}>Trocar tema</button>
       <CardList>
@@ -34,4 +36,4 @@ export const HomePage = () => {
       </CardList>
     </div>
   );
-}
+};
