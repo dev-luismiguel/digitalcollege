@@ -1,60 +1,84 @@
 {
+  "logoUrl": "https://i.pravatar.cc/150?img=1",
   "devs": [
     {
       "profileUrl": "https://i.pravatar.cc/150?img=1",
       "name": "João Silva",
-      "office": "Desenvolvedor Back-end"
+      "role": "Desenvolvedor Back-end"
     },
     {
       "profileUrl": "https://i.pravatar.cc/150?img=2",
       "name": "Maria Santos",
-      "office": "Desenvolvedor Front-end"
+      "role": "Desenvolvedor Front-end"
     },
     {
       "profileUrl": "https://i.pravatar.cc/150?img=3",
       "name": "Pedro Alves",
-      "office": "Desenvolvedor Full-stack"
+      "role": "Desenvolvedor Full-stack"
     },
     {
       "profileUrl": "https://i.pravatar.cc/150?img=4",
       "name": "Ana Rodrigues",
-      "office": "Desenvolvedor Mobile"
+      "role": "Desenvolvedor Mobile"
     },
     {
       "profileUrl": "https://i.pravatar.cc/150?img=5",
       "name": "Carlos Pereira",
-      "office": "Desenvolvedor Back-end"
+      "role": "Desenvolvedor Back-end"
     },
     {
       "profileUrl": "https://i.pravatar.cc/150?img=6",
       "name": "Mariana Oliveira",
-      "office": "Desenvolvedor Front-end"
+      "role": "Desenvolvedor Front-end"
     },
     {
       "profileUrl": "https://i.pravatar.cc/150?img=7",
       "name": "Luís Ferreira",
-      "office": "Desenvolvedor Full-stack"
+      "role": "Desenvolvedor Full-stack"
     },
     {
       "profileUrl": "https://i.pravatar.cc/150?img=8",
       "name": "Isabel Costa",
-      "office": "Desenvolvedor Mobile"
+      "role": "Desenvolvedor Mobile"
     },
     {
       "profileUrl": "https://i.pravatar.cc/150?img=9",
       "name": "José Santos",
-      "office": "Desenvolvedor Back-end"
+      "role": "Desenvolvedor Back-end"
     },
     {
       "profileUrl": "https://i.pravatar.cc/150?img=10",
       "name": "Sofia Pereira",
-      "office": "Desenvolvedor Front-end"
+      "role": "Desenvolvedor Front-end"
     },
     {
       "id": "f050",
       "profileUrl": "https://i.pravatar.cc/150?img=1",
       "name": "João Silva POST",
-      "office": "Desenvolvedor Back-end"
+      "role": "Desenvolvedor Back-end"
+    },
+    {
+      "id": "f155",
+      "profileUrl": "https://i.pravatar.cc/150?img=1",
+      "name": "João Silva POST 2",
+      "role": "Desenvolvedor Back-end"
+    },
+    {
+      "id": "300f",
+      "name": "Add manual",
+      "dateOfBirth": "1111-11-11",
+      "role": "option3",
+      "checkbox": true,
+      "radio": "option2"
+    },
+    {
+      "id": "1302",
+      "name": "123123",
+      "dateOfBirth": "1111-11-01",
+      "role": "option2",
+      "checkbox": true,
+      "radio": "option2",
+      "profileUrl": "https://i.pravatar.cc/150?img=1"
     }
   ]
 }

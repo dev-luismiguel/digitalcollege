@@ -1,5 +1,5 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { ROUTES } from "../routes";
+import { ROUTES } from "../../routes";
 import { AboutPageParams } from "./AboutPage.params";
 import { useTheme } from "../../contexts/ThemeContext";
 

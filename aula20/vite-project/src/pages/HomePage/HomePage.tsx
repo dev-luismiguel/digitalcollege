@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { DevResult } from "../../api/api.props";
+import { DevApiModel } from "../../api/api.props";
 import { getDevs } from "../../api/api";
 import { Card, CardList } from "../../component";
 import { useTheme } from "../../contexts/ThemeContext";
 
 export const HomePage = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [devList, setDevList] = useState<DevResult[]>([]);
+  const [devList, setDevList] = useState<DevApiModel[]>([]);
 
   const { theme, toggleTheme } = useTheme();
 
@@ -26,11 +26,12 @@ export const HomePage = () => {
       {theme}
       <button onClick={() => toggleTheme()}>Trocar tema</button>
       <CardList>
-        {filteredList.map((dev) => (
+        {filteredList.map((dev, index) => (
           <Card
+            key={index}
             imageUrl={dev.profileUrl}
             title={dev.name}
-            subtitle={dev.office}
+            subtitle={dev.role}
           />
         ))}
       </CardList>

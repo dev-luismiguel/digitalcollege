@@ -1,5 +1,5 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import routes from "./pages/routes";
+import routes from "./routes";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
 function App() {
